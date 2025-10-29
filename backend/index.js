@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require('cors');
-const port = 4000;
+const port = process.env.PORT || 4000;
 const mongoose = require("mongoose");
 const problem = require("../shared/newprob");
 const verifytoken = require("./Firebase/verifyToken")
