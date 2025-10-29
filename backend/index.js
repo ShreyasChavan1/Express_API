@@ -3,12 +3,12 @@ const app = express();
 const cors = require('cors');
 const port = 4000;
 const mongoose = require("mongoose");
-const problem = require("./shared/newprob");
+const problem = require("../shared/newprob");
 const verifytoken = require("./Firebase/verifyToken")
-const submission = require("./shared/submissionmode")
-const storage = require('./shared/storeTosupabase')
-const getCode = require("./shared/getFromsupabase")
-const subqueue = require("./shared/queue")
+const submission = require("../shared/submissionmode")
+const storage = require('../shared/storeTosupabase')
+const getCode = require("../shared/getFromsupabase")
+const subqueue = require("../shared/queue")
 const Redis = require('ioredis')
 require("dotenv").config();
 const FRONTEND_URI = process.env.FRONTEND_URL
