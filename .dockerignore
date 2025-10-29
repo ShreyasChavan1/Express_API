@@ -4,7 +4,8 @@
 # Ignore dependencies (they get installed fresh in container)
 
 backend/node_modules/
-
+temp
+docker-compose.yml
 
 # Ignore Git
 .git
