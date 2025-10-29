@@ -24,7 +24,7 @@ const io = new Server(server,{
 })
 
 //we subscribe to comman room for this particular userid
-const subs = new Redis('redis')
+const subs = new Redis(process.env.REDIS_HOST)
 
 subs.subscribe('submissionUpdates')
 //you  left here , go to worker to connect publish to this room
