@@ -7,8 +7,10 @@ COPY backend/package*.json ./
 RUN npm install
 
 # here we are copies all the files from backend folder to curretn folder not making a copy of entire folder itself
-COPY backend/. .
-COPY shared ../shared
+COPY backend . 
+
+# put shared inside backend
+COPY shared ./shared
 EXPOSE 4000
 
 CMD [ "node","index.js" ]
