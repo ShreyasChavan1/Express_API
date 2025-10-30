@@ -10,7 +10,7 @@ async function uploadtosupabase(bucket,filename,code){
     });
 
     if(error){
-        throw new Error("supabase upload failed", error.message)
+        throw new Error(`supabase upload failed ${error.message}`)
     }
     return filename;
 }
