@@ -50,7 +50,15 @@ mongoose.connect(process.env.MONGO_URI)
 .then(()=> console.log("Connected to mongo database !"))
 .catch(err => console.error("there is an error ",err));
 
-app.use(cors());
+const allowedOrigins = [
+  FRONTEND_URI,
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 
